@@ -15,6 +15,7 @@ public class menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
         Cerrar = (Button) findViewById(R.id.btnVolver);
 
         Cerrar.setOnClickListener(new View.OnClickListener() {
@@ -26,4 +27,4 @@ public class menu extends AppCompatActivity {
         });
 
     }
-}
+}//cierra el menu
