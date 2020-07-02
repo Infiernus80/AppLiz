@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MenuPrincipalB extends AppCompatActivity {
-    ImageButton misDatos,menuProductos;
+    ImageButton misDatos, menuProductos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class MenuPrincipalB extends AppCompatActivity {
         misDatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent datos = new Intent(getApplicationContext(),MisDatos.class);
+                Intent datos = new Intent(getApplicationContext(), MisDatos.class);
                 startActivity(datos);
             }
         });//Termina OnClick de Mis datos
@@ -29,7 +29,7 @@ public class MenuPrincipalB extends AppCompatActivity {
         menuProductos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent productos = new Intent(getApplicationContext(),menu.class);
+                Intent productos = new Intent(getApplicationContext(), menu.class);
                 startActivity(productos);
             }
         });//Termina OnClick de Productos

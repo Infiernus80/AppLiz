@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText Correo,Contraseña;
+    private EditText Correo, Contraseña;
     private Button Iniciar;
 
     @Override
@@ -25,13 +25,11 @@ public class MainActivity extends AppCompatActivity {
         Iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Correo.getText().toString().equals("Bodega") && Contraseña.getText().toString().equals("Root")){
-                    Intent intent = new Intent(v.getContext(),MenuPrincipalB.class);
+                if (Correo.getText().toString().equals("Bodega") && Contraseña.getText().toString().equals("Root")) {
+                    Intent intent = new Intent(v.getContext(), MenuPrincipalB.class);
                     startActivity(intent);
 
                 }
-
-
 
 
             }

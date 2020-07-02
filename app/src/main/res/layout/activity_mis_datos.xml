@@ -8,7 +8,7 @@
     tools:context=".MisDatos">
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/etNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/etApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -35,10 +35,10 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/etTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -50,10 +50,10 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText11" />
+        app:layout_constraintTop_toBottomOf="@+id/etFechaNac" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/etCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -65,10 +65,10 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/etContraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -80,10 +80,10 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText10" />
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo" />
 
     <EditText
-        android:id="@+id/editText13"
+        android:id="@+id/etSueldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -95,10 +95,10 @@
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText12" />
+        app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/etFechaNac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -110,10 +110,10 @@
         android:textColor="#040404"
         android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/etApellido" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnVolverD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
