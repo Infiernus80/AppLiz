@@ -31,9 +31,8 @@ public class MenuPrincipalB extends AppCompatActivity {
             public void onClick(View v) {
                 Intent productos = new Intent(getApplicationContext(),menu.class);
                 startActivity(productos);
-
             }
-        });
+        });//Termina OnClick de Productos
 
 
     }
