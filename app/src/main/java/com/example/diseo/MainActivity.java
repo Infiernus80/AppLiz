@@ -2,6 +2,7 @@ package com.example.diseo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.inputmethod.InputContentInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Connection;
@@ -19,8 +21,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText Correo, Contraseña;
-    private Button Iniciar;
+    EditText Correo, Contraseña;
+    Button Iniciar;
+    TextView tvBienvenido;
     ProgressBar barInicio;
     ConMySql conexion;
 
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Contraseña =  findViewById(R.id.Contraseña);
         Iniciar =   findViewById(R.id.btn_Iniciar);
         barInicio = findViewById(R.id.barInicio);
+        tvBienvenido = findViewById(R.id.tvBienvenido);
 
         barInicio.setVisibility(View.GONE);
 
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        @SuppressLint("WrongThread")
         @Override
         protected String doInBackground(String... strings) {
             Connection con = conexion.Conectar();
@@ -86,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (rs.next()) {
                         exito = true;
-                        mensaje = "Bienvenido: " + rs.getString("nombre");
+                         tvBienvenido.setText("Bienvenido: " + rs.getString("nombre"));
                     } else {
                         mensaje = "Usuario o contraseña incorrectos";
                     }
