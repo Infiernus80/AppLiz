@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Correo =  findViewById(R.id.Correo);
-        Contraseña =  findViewById(R.id.Contraseña);
-        Iniciar =   findViewById(R.id.btn_Iniciar);
+        Correo = findViewById(R.id.Correo);
+        Contraseña = findViewById(R.id.Contraseña);
+        Iniciar = findViewById(R.id.btn_Iniciar);
         barInicio = findViewById(R.id.barInicio);
         tvBienvenido = findViewById(R.id.tvBienvenido);
 
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });//Termina onClick iniciar
     }//Termina onCreate
+
     public class inicioSesion extends AsyncTask<String, String, String> {
         String mensaje = "";
         boolean exito = false;
@@ -91,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
                     if (rs.next()) {
                         exito = true;
-                         tvBienvenido.setText("Bienvenido: " + rs.getString("nombre"));
+                        mensaje = "Bienvenido: " + rs.getString("nombre");
+                        //String Nombre = rs.getString("nombre");
+                        Intent datos = new Intent(getApplicationContext(), MenuPrincipalB.class);
+                        datos.putExtra("NomEmpleado", rs.getString("nombre"));
                     } else {
                         mensaje = "Usuario o contraseña incorrectos";
                     }

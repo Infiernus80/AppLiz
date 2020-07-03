@@ -6,17 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MenuPrincipalB extends AppCompatActivity {
     ImageButton misDatos, menuProductos;
+    TextView tvBienvenido;
+    //String NomEmpleado = getIntent().getStringExtra("NomEmpleado");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal_b);
 
+        tvBienvenido = findViewById(R.id.tvBienvenido);
         misDatos = findViewById(R.id.ibtnDatos);
         menuProductos = findViewById(R.id.ibtnProductos);
+
+        tvBienvenido.setText("BIENVENIDO: " +  getIntent().getStringExtra("NomEmpleado"));
 
         misDatos.setOnClickListener(new View.OnClickListener() {
             @Override
