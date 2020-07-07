@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_color"
-    tools:context=".AgregarProducto">
-
+    tools:context=".MenuModificar">
     <EditText
         android:id="@+id/etCodigoMd"
         android:layout_width="wrap_content"
@@ -134,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etExistenciaMd" />
 
     <Button
-        android:id="@+id/btn_Agregar "
+        android:id="@+id/btnModificar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -143,7 +142,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/btn_redondo"
-        android:text="Agregar Producto"
+        android:text="Modificar Producto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDescripcionMd" />
@@ -162,4 +161,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/etCodigoMd"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

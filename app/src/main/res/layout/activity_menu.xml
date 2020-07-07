@@ -8,7 +8,7 @@
     tools:context=".menu">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/ibAgregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/agreagar_productos" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ibConsultar"
         android:layout_width="116dp"
         android:layout_height="73dp"
         android:layout_marginStart="32dp"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        app:layout_constraintTop_toBottomOf="@+id/ibEliminar" />
 
     <TextView
         android:id="@+id/textView9"
@@ -72,10 +72,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/ibAgregar" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/ibEliminar"
         android:layout_width="60dp"
         android:layout_height="98dp"
         android:layout_marginStart="32dp"
@@ -106,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/ibConsultar" />
 
     <TextView
         android:id="@+id/textView10"
@@ -123,10 +123,10 @@
         android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintTop_toBottomOf="@+id/ibModificar" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/ibModificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

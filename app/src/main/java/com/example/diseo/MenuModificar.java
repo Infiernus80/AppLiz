@@ -13,23 +13,21 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class AgregarProducto extends AppCompatActivity {
-    Button btn_Escanear;
-    EditText etCodigoAg,etNombreAg,etFechaCaduAg,etPrecioAg,etCategoriaAg,etExistenciaAg,etDescripcionAg;
-
+public class MenuModificar extends AppCompatActivity {
+    Button btn_EscanearMd;
+    EditText etCodigoMd,etNombreMd,etFechaCaduMd,etPrecioMd,etCategoriaMd,etExistenciaMd,etDescripcionMd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_producto);
+        setContentView(R.layout.activity_menu_modificar);
 
-        btn_Escanear = findViewById(R.id.btn_EscanearMd);
-        etCodigoAg = findViewById(R.id.etCodigoMd);
+        btn_EscanearMd = findViewById(R.id.btn_EscanearMd);
+        etCodigoMd = findViewById(R.id.etCodigoMd);
 
-        btn_Escanear.setOnClickListener(mOnClickListener);
+        btn_EscanearMd.setOnClickListener(mOnClickListener);
+    }
 
-
-    }//Fin del metodo onCreate
     //Metodo para escanear
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -37,7 +35,7 @@ public class AgregarProducto extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
         if (result != null){
             if (result.getContents() != null){
-                etCodigoAg.setText(result.getContents());
+                etCodigoMd.setText(result.getContents());
             }else{
                 Toast.makeText(this, "Error al escanear el codigo", Toast.LENGTH_SHORT).show();
             }
@@ -50,10 +48,9 @@ public class AgregarProducto extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.btn_EscanearMd:
-                    new IntentIntegrator(AgregarProducto.this).initiateScan();
+                    new IntentIntegrator(MenuModificar.this).initiateScan();
 
             }
         }
     };//Termina metodo del boton escanear
-
-}//Fin de la clase
+}
