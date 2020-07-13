@@ -15,7 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MenuEliminar"></activity>
         <activity android:name=".MenuConsultar" />
         <activity android:name=".MenuModificar" />
         <activity android:name=".MisDatos" />

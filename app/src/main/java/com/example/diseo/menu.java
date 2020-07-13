@@ -21,7 +21,6 @@ public class menu extends AppCompatActivity {
         ibAgregar = findViewById(R.id.ibAgregar);
         ibModificar = findViewById(R.id.ibModificar);
         ibConsultar = findViewById(R.id.ibConsultar);
-        ibEliminar = findViewById(R.id.ibEliminar);
 
         //Ir a menu Agregar
         ibAgregar.setOnClickListener(new View.OnClickListener() {
@@ -48,13 +47,7 @@ public class menu extends AppCompatActivity {
                 startActivity(consultar);
             }
         });
-        ibEliminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent eliminar = new Intent(getApplicationContext(),MenuEliminar.class);
-                startActivity(eliminar);
-            }
-        });
+
 
         Cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
