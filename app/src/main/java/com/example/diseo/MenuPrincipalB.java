@@ -3,6 +3,7 @@ package com.example.diseo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 public class MenuPrincipalB extends AppCompatActivity {
     ImageButton misDatos, menuProductos;
     TextView tvBienvenido;
-    //String NomEmpleado = getIntent().getStringExtra("NomEmpleado");
+    String Nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +22,16 @@ public class MenuPrincipalB extends AppCompatActivity {
         tvBienvenido = findViewById(R.id.tvBienvenido);
         misDatos = findViewById(R.id.ibtnDatos);
         menuProductos = findViewById(R.id.ibtnProductos);
+        Bundle extra = getIntent().getExtras();
+        Nombre = extra.getString("NomEmpleado");
 
-        tvBienvenido.setText("BIENVENIDO: " +  getIntent().getStringExtra("NomEmpleado"));
+        tvBienvenido.setText("BIENVENIDO: "+Nombre);
 
         misDatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent datos = new Intent(getApplicationContext(), MisDatos.class);
+                datos.putExtra("Empleado",Nombre);
                 startActivity(datos);
             }
         });//Termina OnClick de Mis datos

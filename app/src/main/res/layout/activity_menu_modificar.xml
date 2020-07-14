@@ -133,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etExistenciaMd" />
 
     <Button
-        android:id="@+id/btnModificar"
+        android:id="@+id/btnConsultar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -142,10 +142,27 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/btn_redondo"
-        android:text="Modificar Producto"
+        android:text="Consultar producto"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDescripcionMd" />
+
+    <Button
+        android:id="@+id/btnModificar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/btn_redondo"
+        android:text="Modificar Producto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultar" />
 
     <Button
         android:id="@+id/btn_EscanearMd"

@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tvBienvenido;
     ProgressBar barInicio;
     ConMySql conexion;
+    String nombre;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, msj, Toast.LENGTH_LONG).show();
 
             if (exito) {
-                Intent iniciar = new Intent(getApplicationContext(), MenuPrincipalB.class);
+                Intent iniciar = new Intent(MainActivity.this, MenuPrincipalB.class);
+                iniciar.putExtra("NomEmpleado", nombre);
                 startActivity(iniciar);
             }
         }
@@ -92,10 +95,10 @@ public class MainActivity extends AppCompatActivity {
 
                     if (rs.next()) {
                         exito = true;
-                        mensaje = "Bienvenido: " + rs.getString("nombre");
-                        //String Nombre = rs.getString("nombre");
-                        Intent datos = new Intent(getApplicationContext(), MenuPrincipalB.class);
-                        datos.putExtra("NomEmpleado", rs.getString("nombre"));
+                        //mensaje = "Bienvenido: " + rs.getString("nombre");
+                        nombre = rs.getString("nombre");
+
+
                     } else {
                         mensaje = "Usuario o contraseña incorrectos";
                     }
