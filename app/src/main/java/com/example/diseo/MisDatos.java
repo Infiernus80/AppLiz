@@ -71,7 +71,7 @@ public class MisDatos extends AppCompatActivity {
                 etTelefono.setText(Telefono);
                 etCorreo.setText(Correo);
                 etContraseña.setText(Contraseña);
-                etSuledo.setText((int) Sueldo);
+                etSuledo.setText(""+Sueldo);
 
             }else{
                 Toast.makeText(MisDatos.this, msj, Toast.LENGTH_SHORT).show();
