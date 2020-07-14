@@ -17,6 +17,7 @@ public class menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
         Cerrar = (Button) findViewById(R.id.btnVolver);
         ibAgregar = findViewById(R.id.ibAgregar);
         ibModificar = findViewById(R.id.ibModificar);
@@ -58,4 +59,4 @@ public class menu extends AppCompatActivity {
         });
 
     }
-}
+}//cierra el menu
