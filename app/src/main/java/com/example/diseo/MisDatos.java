@@ -43,7 +43,7 @@ public class MisDatos extends AppCompatActivity {
         empleado = extra.getString("Empleado");
 
         OperaABM datos = new OperaABM();
-        datos.execute("select * from empleados where nombre="+empleado);
+        datos.execute("select * from empleados where nombre=?");
 
         btnVolverD.setOnClickListener(new View.OnClickListener() {
             @Override
